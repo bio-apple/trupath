@@ -1,0 +1,480 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body-mock {
+    display: block;
+    font-family: 'Noto Sans SC', sans-serif;
+    color: var(--color-text-primary);
+    background: var(--color-background-tertiary);
+    padding: 0;
+  }
+
+  .article-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+  }
+
+  .hero {
+    background: linear-gradient(135deg, #042C53 0%, #185FA5 60%, #1D9E75 100%);
+    padding: 40px 32px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: 20px;
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    border: 0.5px solid rgba(255,255,255,0.25);
+  }
+
+  .hero-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-subtitle {
+    font-size: 13px;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-meta {
+    margin-top: 20px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+  }
+
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+  }
+
+  .meta-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #5DCAA5;
+    flex-shrink: 0;
+  }
+
+  .content {
+    padding: 28px 32px;
+  }
+
+  .lead-box {
+    background: var(--color-background-secondary);
+    border-left: 3px solid #185FA5;
+    border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    margin-top: 28px;
+  }
+
+  .section-label:first-child { margin-top: 0; }
+
+  .label-line {
+    width: 24px; height: 2px;
+    background: #185FA5;
+    border-radius: 1px;
+  }
+
+  .section-label span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #185FA5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  h2.section-title {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+    margin-bottom: 12px;
+  }
+
+  .body-text {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--color-text-primary);
+    margin-bottom: 16px;
+  }
+
+  .body-text:last-child { margin-bottom: 0; }
+
+  .highlight-word {
+    color: #185FA5;
+    font-weight: 500;
+  }
+
+  .divider {
+    border: none;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    margin: 24px 0;
+  }
+
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 20px 0 24px;
+  }
+
+  .stat-card {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 14px 12px;
+    text-align: center;
+    border: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .stat-num {
+    font-size: 22px;
+    font-weight: 700;
+    color: #185FA5;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .stat-desc {
+    font-size: 11px;
+    color: var(--color-text-secondary);
+    line-height: 1.4;
+  }
+
+  .feature-list {
+    list-style: none;
+    margin: 12px 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .feature-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--color-text-primary);
+  }
+
+  .fi-icon {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: #E6F1FB;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .fi-icon i { font-size: 11px; color: #185FA5; }
+
+  .compare-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .compare-head {
+    font-size: 11px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 6px;
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md) var(--border-radius-md) 0 0;
+    border: 0.5px solid var(--color-border-tertiary);
+  }
+
+  .compare-cell {
+    font-size: 12px;
+    text-align: center;
+    padding: 8px 6px;
+    border: 0.5px solid var(--color-border-tertiary);
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+  }
+
+  .compare-cell.highlight {
+    background: #E6F1FB;
+    color: #185FA5;
+    font-weight: 500;
+    border-color: #B5D4F4;
+  }
+
+  .gene-card {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: 0.5px solid var(--color-border-tertiary);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .gene-badge {
+    background: #185FA5;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: var(--border-radius-md);
+    white-space: nowrap;
+    margin-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .gene-text {
+    font-size: 13px;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+  }
+
+  .callout {
+    background: #E6F1FB;
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px;
+    margin: 20px 0;
+    border: 0.5px solid #B5D4F4;
+  }
+
+  .callout p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: #185FA5;
+    font-weight: 500;
+  }
+
+  .conclusion-box {
+    background: linear-gradient(135deg, #042C53 0%, #185FA5 100%);
+    border-radius: var(--border-radius-lg);
+    padding: 24px;
+    margin-top: 24px;
+    color: #fff;
+  }
+
+  .conclusion-box h3 {
+    font-family: 'Noto Serif SC', serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+
+  .conclusion-box p {
+    font-size: 13px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.8);
+  }
+
+  .footer-info {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 0.5px solid var(--color-border-tertiary);
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    line-height: 1.7;
+    text-align: center;
+  }
+</style>
+
+<div class="article-wrap">
+  <div class="hero">
+    <div class="hero-tag">基因组学 · 前沿进展</div>
+    <div class="hero-title">Constellation：照亮罕见病基因诊断的新星</div>
+    <div class="hero-subtitle">Illumina新一代测序技术，兼具长读长洞察力与短读长的经济性，为数以百万计的罕见病患者开辟全新诊断路径</div>
+    <div class="hero-meta">
+      <div class="meta-item"><div class="meta-dot"></div>来源：medRxiv 预印本（2025年11月）</div>
+      <div class="meta-item"><div class="meta-dot"></div>贝勒医学院 × Illumina</div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <div class="lead-box">
+      全球超过3亿人患有罕见遗传病，但现有基因检测的确诊率不足40%。短读长测序在同源区域"盲区"重重，长读长测序成本高昂难以推广。一种名为 Constellation 的新型测序技术，正试图打破这一困局。
+    </div>
+
+    <div class="section-label"><div class="label-line"></div><span>背景与痛点</span></div>
+    <h2 class="section-title">罕见病诊断：一场悬而未决的挑战</h2>
+    <p class="body-text">在遗传病领域，<span class="highlight-word">结构变异（SV）、拷贝数变异（CNV）和复杂串联重复</span>是导致诊断失败的重要原因。短读长测序（如常规Illumina）因读长限制，难以覆盖基因组中高度同源的"暗区"；而PacBio、Oxford Nanopore等长读长平台虽然精准，但每个样本需要至少5微克高质量DNA，且成本居高不下，在罕见病样本量有限的现实中难以规模化部署。</p>
+    <p class="body-text">此外，<span class="highlight-word">单倍型相位分析</span>——即判断一对致病变异分别来自父亲还是母亲——对于复合杂合型遗传病的诊断至关重要，而这正是传统短读长技术的软肋。</p>
+
+    <hr class="divider">
+
+    <div class="section-label"><div class="label-line"></div><span>技术原理</span></div>
+    <h2 class="section-title">Constellation 是如何工作的？</h2>
+    <p class="body-text">Constellation 是 Illumina 推出的一种全新"邻近读取"测序技术。其核心创新在于：将<span class="highlight-word">未经剪切的长DNA分子直接加载到流动槽</span>上，由仪器在测序启动后于流动槽表面完成断裂，同时记录每个读段在流动槽上的物理位置坐标。</p>
+    <ul class="feature-list">
+      <li>
+        <div class="fi-icon" aria-hidden="true"><i class="ti ti-map-pin"></i></div>
+        <span>物理位置信息使来自同一 DNA 分子的多个读段得以被识别为一组，进而重建数十至数百 kb 的长程单倍型</span>
+      </li>
+      <li>
+        <div class="fi-icon" aria-hidden="true"><i class="ti ti-dna"></i></div>
+        <span>仅需纳克级 DNA 输入量，远低于长读长平台（PacBio 需约5微克、ONT 需约1微克），特别适合罕见病临床样本</span>
+      </li>
+      <li>
+        <div class="fi-icon" aria-hidden="true"><i class="ti ti-cpu"></i></div>
+        <span>完全基于现有 Illumina 基础设施（ICA平台 + DRAGEN分析流程），无需新增仪器投入</span>
+      </li>
+    </ul>
+
+    <hr class="divider">
+
+    <div class="section-label"><div class="label-line"></div><span>基准测试</span></div>
+    <h2 class="section-title">三大指标全面领先</h2>
+    <p class="body-text">研究团队利用 GIAB 参考基因组三人家系（HG002/003/004）对 Constellation 进行了系统基准测试，并与标准短读长测序（SRS）、PacBio HiFi 及 ONT R10 全面比较：</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-num">0.9995</div>
+        <div class="stat-desc">SNV/indel F1值<br>（GIAB v4.2.1）</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">800 kb</div>
+        <div class="stat-desc">平均单倍型<br>相位 NG50</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0.796</div>
+        <div class="stat-desc">结构变异 F1值<br>（超越短读长）</div>
+      </div>
+    </div>
+
+    <p class="body-text">在<span class="highlight-word">SNV/indel检测</span>上，Constellation 超越了长读长平台（PacBio F1=0.9896，ONT F1=0.9812）；在<span class="highlight-word">结构变异检测</span>上，F1=0.796，大幅超越传统短读长工具 Manta（F1=0.330），接近长读长水准；在<span class="highlight-word">单倍型分析</span>上，99.38% 的杂合 SNV 被成功分配至特定单倍型，基因完整相位覆盖率达84.6%。</p>
+
+    <hr class="divider">
+
+    <div class="section-label"><div class="label-line"></div><span>临床应用</span></div>
+    <h2 class="section-title">21个罕见病家系的真实验证</h2>
+    <p class="body-text">研究团队在来自 GREGoR 联盟的21个家系中验证了 Constellation 的临床价值，涵盖<span class="highlight-word">已解析病例</span>和<span class="highlight-word">此前用常规方法未能确诊</span>的疑难病例。</p>
+
+    <div class="gene-card">
+      <div class="gene-badge">复合杂合</div>
+      <div class="gene-text">在6个已知复合杂合致病变异的家系中，Constellation 独立重新识别了全部24个致病变异，并成功对其中22对进行了父源/母源起源判定，精准区分每个变异的遗传来源。</div>
+    </div>
+
+    <div class="gene-card">
+      <div class="gene-badge">MECP2</div>
+      <div class="gene-text">通过独创的"共定位图谱（colocation plot）"技术，成功解析了位于 Xq28 高重复区域、此前难以诊断的三种复杂 MECP2 结构变异，包括串联重复、倒位-重复等复杂构型。</div>
+    </div>
+
+    <div class="gene-card">
+      <div class="gene-badge">未解病例</div>
+      <div class="gene-text">在8个经过临床外显子组/基因组测序仍未确诊的疑难家系中，Constellation 成功解析了至少2个此前漏诊的新型致病变异，为长期困扰患者家庭的诊断之谜提供了答案。</div>
+    </div>
+
+    <div class="callout">
+      <p>💡 值得注意的是，在全部30例未解病例的样本中，仅 Constellation 能够完成全部测序，而 PacBio 因 DNA 量不足无法覆盖任何一例——这在临床实践中具有决定性意义。</p>
+    </div>
+
+    <hr class="divider">
+
+    <div class="section-label"><div class="label-line"></div><span>技术对比</span></div>
+    <h2 class="section-title">与现有技术的核心差异</h2>
+
+    <div class="compare-row">
+      <div class="compare-head">指标</div>
+      <div class="compare-head">传统平台</div>
+      <div class="compare-head" style="background:#E6F1FB;color:#185FA5;border-color:#B5D4F4;">Constellation</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">DNA需求量</div>
+      <div class="compare-cell">PacBio ≥5 µg<br>ONT ≥1 µg</div>
+      <div class="compare-cell highlight">仅需 350 ng</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">基础设施</div>
+      <div class="compare-cell">需新购专用仪器</div>
+      <div class="compare-cell highlight">复用现有 Illumina</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">SNV准确性</div>
+      <div class="compare-cell">长读长 F1≈0.97-0.99</div>
+      <div class="compare-cell highlight">F1=0.9995（更优）</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">SV检测</div>
+      <div class="compare-cell">短读长 F1≈0.33-0.70</div>
+      <div class="compare-cell highlight">F1=0.796（大幅提升）</div>
+    </div>
+    <div class="compare-row">
+      <div class="compare-cell">单倍型相位</div>
+      <div class="compare-cell">短读长基本无法实现</div>
+      <div class="compare-cell highlight">NG50 约 800 kb</div>
+    </div>
+
+    <div class="conclusion-box">
+      <h3>编者点评</h3>
+      <p>这项研究标志着基因组测序技术进入"可及性长读长时代"。Constellation 并未在精度上超越 PacBio 或 ONT，但它以极低的 DNA 消耗量、可与现有基础设施无缝衔接的部署方式，实现了长程信息的民主化获取。对于样本珍贵、资源有限的罕见病诊断场景，这一技术的价值可能远超其在基准测试中的数据所呈现的。未来若能结合 RNA 测序与表观基因组数据，诊断率的进一步提升指日可待。</p>
+    </div>
+
+    <div class="footer-info">
+      原文：Cheng et al., "Constellation illuminates rare disease genetics"<br>
+      medRxiv 预印本，DOI: 10.1101/2025.10.15.25337675 | 贝勒医学院 × Illumina<br>
+      本文为学术解读，预印本尚未经同行评审，仅供参考
+    </div>
+
+  </div>
+</div>
