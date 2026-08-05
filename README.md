@@ -21,9 +21,14 @@ DRAGEN Reports:https://support.illumina.com/sequencing/sequencing_software/drage
  - link quality:基于Phred尺度的质量分数，用于评估两个临近reads来源于同一原始分子模版的概率
  - Link Q25 以上的reads，在全基因组上的平均覆盖度 > 30x (默认值:--proximity-min-linkq-threshold 10 --proximity-additional-linkq-thresholds 25)
 
-2. Multi-Region Joint Detection (MRJD)多区域联合检测，只兼容hg38分析，涉及到15个医学相关的基因(9个医学相关的旁系同源区域进行小变异和拷贝数检测)([15 clinically relevant genes](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline#multi-region-joint-detection)).
+2. Multi-Region Joint Detection (MRJD)多区域联合检测，只兼容hg38分析，涉及到15个医学相关的基因(9个医学相关的旁系同源区域进行小变异和拷贝数检测)
+([15 clinically relevant genes](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline#multi-region-joint-detection)).
 
 ![15_medically_relevant_paralogous_genes](./15_medically_relevant_paralogous_genes.png)
+
+ - copy number is less than 8
+ - only supports the hg38 reference genome
+ - linked coverage (without duplicates) is ≥16X
 
 参考链接 [Input recommendations FAQ for the TruPath Genome assay:https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
 
