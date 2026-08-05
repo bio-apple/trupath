@@ -2,7 +2,6 @@
 
 ![workflow](./workflow.png)
 
-
 硬件：dragen sever v4
 
 软件：dragen v4.5+
