@@ -27,9 +27,10 @@ DRAGEN Reports:https://support.illumina.com/sequencing/sequencing_software/drage
 
 2. Multi-Region Joint Detection (MRJD)多区域联合检测，只兼容hg38分析，涉及到15个医学相关的基因组([15 clinically relevant genes](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline#multi-region-joint-detection)).
 
-![MRJD](MRJD.avif)
+![15_medically_relevant_paralogous_genes](./15_medically_relevant_paralogous_genes.png)
 
-link‑quality threshold specified using --proximity-min-linkq-threshold(default: 10) and --proximity-additional-linkq-thresholds (default: 25; maximum of two values)
+
+![MRJD](MRJD.avif)
 
 3. phasing(定相)
 
