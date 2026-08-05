@@ -9,10 +9,6 @@
 
 license:Proximity license（买了试剂盒免费送）
 
-HiGlass and cooler 用来看(colocation)协同定位图
-
-协同定位图默认解析度是default size of 200 kb
-
 DRAGEN Reports:https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html
 
 2.5-3.5h per WGS
