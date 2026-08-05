@@ -25,6 +25,9 @@ DRAGEN Reports:https://support.illumina.com/sequencing/sequencing_software/drage
 
 ![15_medically_relevant_paralogous_genes](./15_medically_relevant_paralogous_genes.png)
 
+参考链接 [Input recommendations FAQ for the TruPath Genome assay:https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
+
+
 
 ![MRJD](MRJD.avif)
 
@@ -37,12 +40,15 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
 ![SMW_vs_HMW](./HMW_vs_SMW.png)
 
 4. colocation协同定位(default size of 200 kb,默认输出文件：colocation.cooler)
-
+**third-party tools**
  - cooler（https://cooler.readthedocs.io/en/latest/schema.html）可以生成不同解析度的.mcooler
  - HiGlass(https://github.com/higlass/higlass)结果查看
 
-[Illumina TruPath Genome WGS:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs)
-      
+
+
+
+## dragen-trupath-pipeline
+
     /opt/dragen/$VERSION/bin/dragen         #DRAGEN install path 
     --ref-dir $REF_DIR                      #path to DRAGEN pangenome hashtable 
     --output-directory $OUTPUT 
@@ -73,16 +79,8 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
     # Multi-Region Joint Detection (MRJD) 
     --enable-mrjd true 
 
+参考链接
+
 [Illumina TruPath Genome Pipeline:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline)
 
-
-[Input recommendations FAQ for the TruPath Genome assay:https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
-
-
-
-备注：
-
-- 一个样本一条lane,samplesheet需指定lane
-- 
-[Cheng S, Zhang Q, Zheng X, et al. Constellation illuminates rare disease genetics[J]. medRxiv, 2025: 2025.10. 15.25337675.](https://pmc.ncbi.nlm.nih.gov/articles/PMC12633143/)
-
+[Illumina TruPath Genome WGS:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs)
