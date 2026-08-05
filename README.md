@@ -5,7 +5,7 @@
 
 硬件：dragen sever v4
 
-软件：dragen v4.5(及以上)
+软件：dragen v4.5+
 
 license:Proximity license（买了试剂盒免费送）
 
