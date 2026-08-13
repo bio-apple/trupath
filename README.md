@@ -83,6 +83,26 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
     # Multi-Region Joint Detection (MRJD) 
     --enable-mrjd true 
 
+## dragen-report && dragen-summary-reports
+
+下载rpm 软件包：https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html
+
+user guide:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-reports
+
+demo CMD:
+
+
+     /usr/bin/dragen-reports -f \
+    -d /data \ #dragen的输出结果文件
+    -o /output/report.html \
+    -m /opt/dragen-reports/manifests/germline_wgs.json
+
+
+    /usr/bin/dragen-summary-reports \
+        -f \
+        -d /data \ #dragen的输出结果文件
+        -o /data/AggregateReports/summary.html
+
 参考链接
 
 [Illumina TruPath Genome Pipeline:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-trupath-pipeline)
