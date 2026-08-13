@@ -29,7 +29,7 @@ DRAGEN Reports:https://support.illumina.com/sequencing/sequencing_software/drage
  - only supports the hg38 reference genome
  - linked coverage (without duplicates) is ≥16X
 
-参考链接 [Input recommendations FAQ for the TruPath Genome assay:https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
+参考链接 [Input recommendations FAQ for the TruPath Genome assay](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
 
 
 
