@@ -110,3 +110,7 @@ demo CMD:
 [Illumina TruPath Genome WGS:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs)
 
 [NovaSeq X Run Planning - BCL Convert](https://help.connected.illumina.com/illumina-trupath-genome/sequencing-run-setup/novaseq-x-run-planning-bcl-convert)
+
+[Illumina TruPath Genome Product Documentation](https://support.illumina.com/sequencing/sequencing_kits/illumina-trupath-genome/documentation.html)
+
+[Illumina TruPath Genome Support Resources](https://support.illumina.com/sequencing/sequencing_kits/illumina-trupath-genome.html)
