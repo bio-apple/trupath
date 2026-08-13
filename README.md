@@ -8,8 +8,6 @@
 
 license:Proximity license（买了试剂盒免费送）
 
-DRAGEN Reports:https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html
-
 2.5-3.5h per WGS
 
 ## 名词解释
@@ -43,11 +41,10 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
 
 ![SMW_vs_HMW](./HMW_vs_SMW.png)
 
-4. colocation协同定位(default size of 200 kb,默认输出文件：colocation.cooler)
-**third-party tools**
- - cooler（https://cooler.readthedocs.io/en/latest/schema.html）可以生成不同解析度的.mcooler
- - HiGlass(https://github.com/higlass/higlass)结果查看
-   - [Visualize Data in HiGlass](https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass)
+4. colocation协同定位(default size of 200 kb,默认输出文件：colocation.cooler) **third-party tools**
+ - [cooler](https://cooler.readthedocs.io/en/latest/schema.html）可以生成不同解析度的.mcooler
+ - [HiGlass](https://github.com/higlass/higlass) 结果查看
+ - [Visualize Data in HiGlass](https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass)
 
 
 ## [DRAGEN Recipes:TruPath Pipelines](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs)
