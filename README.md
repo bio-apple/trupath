@@ -47,7 +47,7 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
 **third-party tools**
  - cooler（https://cooler.readthedocs.io/en/latest/schema.html）可以生成不同解析度的.mcooler
  - HiGlass(https://github.com/higlass/higlass)结果查看
-   - [Visualize Data in HiGlass:https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass](https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass)
+   - [Visualize Data in HiGlass](https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass)
 
 
 ## [DRAGEN Recipes:TruPath Pipelines](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs)
