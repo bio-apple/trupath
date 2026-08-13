@@ -50,7 +50,7 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
    - [Visualize Data in HiGlass:https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass](https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass)
 
 
-## dragen-trupath-pipeline
+## [DRAGEN Recipes:TruPath Pipelines](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-recipes/illumina-trupath-genome-wgs)
 
     /opt/dragen/$VERSION/bin/dragen         #DRAGEN install path 
     --ref-dir $REF_DIR                      #path to DRAGEN pangenome hashtable 
