@@ -95,7 +95,7 @@ demo CMD:
      /usr/bin/dragen-reports -f \
     -d /data \ #dragen的输出结果文件
     -o /output/report.html \
-    -m /opt/dragen-reports/manifests/germline_wgs.json
+    -m /opt/dragen-reports/manifests/trupath/germline_wgs.json
 
 
     /usr/bin/dragen-summary-reports \
