@@ -42,8 +42,8 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
 ![SMW_vs_HMW](./HMW_vs_SMW.png)
 
 4. colocation协同定位(default size of 200 kb,默认输出文件：colocation.cooler) **third-party tools**
- - [cooler](https://cooler.readthedocs.io/en/latest/schema.html）可以生成不同解析度的.mcooler
- - [HiGlass](https://github.com/higlass/higlass) 结果查看
+ - [cooler](https://cooler.readthedocs.io/en/latest/schema.html) 
+ - [HiGlass](https://github.com/higlass/higlass)
  - [Visualize Data in HiGlass](https://help.connected.illumina.com/illumina-trupath-genome/data-visualizations-and-analysis/visualize-data-in-higlass)
 
 
