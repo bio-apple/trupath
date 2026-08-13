@@ -27,7 +27,7 @@ license:Proximity license（买了试剂盒免费送）
  - only supports the hg38 reference genome
  - linked coverage (without duplicates) is ≥16X
 
-参考链接 [Input recommendations FAQ for the TruPath Genome assay](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
+[Input recommendations FAQ for the TruPath Genome assay](https://knowledge.illumina.com/library-preparation/general/library-preparation-general-faq-list/000010167)
 
 
 
