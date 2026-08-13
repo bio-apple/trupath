@@ -82,7 +82,7 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
     # Multi-Region Joint Detection (MRJD) 
     --enable-mrjd true 
 
-## [dragen-report && dragen-summary-reports:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-reports](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-reports)
+## [dragen-report && dragen-summary-reports](https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-reports)
 
 下载rpm 软件包:
 
