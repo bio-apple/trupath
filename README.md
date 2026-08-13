@@ -102,9 +102,7 @@ demo CMD:
         -d /data \ #dragen的输出结果文件
         -o /data/AggregateReports/summary.html
 
-## TruPath Outputs
-
-[DRAGEN secondary analysis outputs and metrics](https://help.connected.illumina.com/illumina-trupath-genome/outputs-and-metrics/output-files-and-metrics)
+## [TruPath Outputs:DRAGEN secondary analysis outputs and metrics](https://help.connected.illumina.com/illumina-trupath-genome/outputs-and-metrics/output-files-and-metrics)
 
 ## 参考链接
 
