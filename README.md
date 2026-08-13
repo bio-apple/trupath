@@ -85,9 +85,13 @@ Standard molecular weight DNA （SMW）vs High molecular weight （HMW）
 
 ## dragen-report && dragen-summary-reports
 
-下载rpm 软件包：https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html
+下载rpm 软件包:
 
-user guide:https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-reports
+https://support.illumina.com/sequencing/sequencing_software/dragen-bio-it-platform/product_files.html
+
+user guide:
+
+https://help.dragen.illumina.com/dragen-v4.5/product-guides/dragen-v4.5/dragen-reports
 
 demo CMD:
 
